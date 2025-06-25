@@ -10,17 +10,20 @@
 @csrf
 
 <div class="mb-3">
-    <label calss="form-label">Nome</label>
-    <input type="text" class="form-control" name="nome">
+    <label class="form-label">Nome</label>
+    <input type="text" class="form-control @error('nome') is-invalid @enderror" name="nome">
+@if ($errors->has('nome'))
+<div class="invalid-feedback">O campo nome é obrigatório</div>
+@endif
 </div>
 
 <div class="mb-3">
-    <label calss="form-label">Telefone</label>
-    <input type="text" class="form-control" name="numero">
+    <label class="form-label">Telefone</label>
+    <input type="text" id="telefoneMask" class="form-control" name="numero">
 </div>
 
 <div class="mb-3">
-    <label calss="form-label">E-mail</label>
+    <label class="form-label">E-mail</label>
     <input type="text" class="form-control" name="email">
 </div>
 
