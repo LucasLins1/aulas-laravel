@@ -28,7 +28,7 @@
         <label class="form-label @error ('email') is-invalid @enderror">E-mail</label>
         <input type="text" class="form-control" name="email" placeholder="exemplo@email.com">
     @if ($errors->has('numero'))
-    <div class="invalid-feedback">O campo telefone é obrigatório</div>
+    <div class="invalid-feedback">O campo E-mail é obrigatório</div>
     @endif
     </div>
  
